@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When &amp; Where — Our Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav-title">
+      <a href="index.html">Our Wedding</a>
+    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Info</a></li>
+      <li><a href="when-where.html" class="active">When &amp; Where</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="guide.html">Wedding Guide</a></li>
+      <li><a href="travel-guide.html">Travel Guide</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+      <a href="rsvp.html" class="btn-rsvp">RSVP</a>
+    </div>
+  </header>
+
+  <!-- WHEN -->
+  <section class="section-cream">
+    <div class="container two-col">
+      <div class="when-where-content">
+        <h2>When</h2>
+        <p class="text-italic" style="font-size:20px; margin-bottom:24px;">Saturday, June 12, 2027</p>
+
+        <h3>Church: 1pm — 2pm</h3>
+        <p>The wedding ceremony will start at 1pm. This will be conducted in Romanian, but a translated version will be available on the day if you would like to follow along. The ceremony will take 45 minutes to 1 hour — please feel free to sit or stand wherever you wish.</p>
+
+        <h3>Reception: 3pm — 3am</h3>
+        <p>We're delighted to welcome you to our wedding reception at 3pm. For our non-Romanian friends, please note the dinner will be served slowly throughout the night, whilst the wedding cake will be brought out at midnight before the afterparty begins.</p>
+      </div>
+      <div>
+        <!-- placeholder image area -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE -->
+  <section class="section-sage">
+    <div class="container">
+      <h2 class="section-label">Where</h2>
+      <div class="two-col">
+        <div class="venue-card">
+          <h3>Church</h3>
+          <h4>Biserica "Adormirea Maicii Domnului"</h4>
+          <p>Built in 1778, this historic Romanian Orthodox church has welcomed generations of families for life's most meaningful moments. Surrounded by the timeless beauty and traditions of Transylvania, it is a place of faith, love, and community — making it the perfect setting for us to begin our marriage together.</p>
+          <p><strong>Address:</strong> Strada Andrei Șaguna nr. 206, Hărman, Romania</p>
+          <a href="https://maps.google.com/?q=Biserica+Adormirea+Maicii+Domnului,+Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" class="maps-link">View on Google Maps ↗</a>
+        </div>
+        <div class="venue-card">
+          <h3>Reception</h3>
+          <h4>M.K. 1930</h4>
+          <p>Blending rustic Transylvanian character with warm hospitality, the space carries the spirit of the village's history while creating a beautiful setting for gathering, laughter, and celebration. We're so excited to share an evening of food, music, and joy here with the people we love most.</p>
+          <p><strong>Address:</strong> Strada Mihai Viteazu nr. 436, Hărman, Romania</p>
+          <a href="https://maps.google.com/?q=MK+1930,+Strada+Mihai+Viteazu+436,+Harman,+Romania" target="_blank" class="maps-link">View on Google Maps ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP LINKS -->
+  <section class="section-cream">
+    <div class="container two-col">
+      <div style="text-align:center;">
+        <div style="background:rgba(73,47,29,0.05); border-radius:16px; padding:32px; border:1px solid rgba(73,47,29,0.1);">
+          <p style="font-size:40px; margin-bottom:12px;">⛪</p>
+          <h4 style="font-family:'Libre Baskerville',serif; font-size:18px; margin-bottom:8px;">The Church</h4>
+          <p style="font-size:14px; line-height:1.7; margin-bottom:16px;">Strada Andrei Șaguna nr. 206<br/>Hărman, Romania</p>
+          <a href="https://maps.google.com/?q=Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" rel="noopener" class="btn-large" style="padding:12px 32px; font-size:12px;">Open in Google Maps ↗</a>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <div style="background:rgba(73,47,29,0.05); border-radius:16px; padding:32px; border:1px solid rgba(73,47,29,0.1);">
+          <p style="font-size:40px; margin-bottom:12px;">🥂</p>
+          <h4 style="font-family:'Libre Baskerville',serif; font-size:18px; margin-bottom:8px;">The Reception</h4>
+          <p style="font-size:14px; line-height:1.7; margin-bottom:16px;">Strada Mihai Viteazu nr. 436<br/>Hărman, Romania</p>
+          <a href="https://maps.google.com/?q=MK+1930+Strada+Mihai+Viteazu+436+Harman+Romania" target="_blank" rel="noopener" class="btn-large" style="padding:12px 32px; font-size:12px;">Open in Google Maps ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Sabi &amp; Ian</p>
+    <a href="mailto:iansabiwedding@gmail.com">iansabiwedding@gmail.com</a>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

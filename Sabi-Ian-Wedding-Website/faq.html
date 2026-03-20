@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Our Wedding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav-title">
+      <a href="index.html">Our Wedding</a>
+    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Info</a></li>
+      <li><a href="when-where.html">When &amp; Where</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="guide.html">Wedding Guide</a></li>
+      <li><a href="travel-guide.html">Travel Guide</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
+      <a href="rsvp.html" class="btn-rsvp">RSVP</a>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <div class="page-banner">
+    <h1>Frequently Asked Questions</h1>
+  </div>
+
+  <!-- FAQ CONTENT -->
+  <section class="section-cream">
+    <div class="container">
+      <div class="faq-container">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            When is the RSVP deadline?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Kindly RSVP by <strong>5th August 2026</strong>. You can submit your RSVP via the <a href="rsvp.html">RSVP page</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What time should I arrive for the ceremony?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The wedding ceremony will start at <strong>13:00</strong>, and the reception at <strong>15:00</strong>. Please arrive a few minutes early so you can find a seat before the ceremony begins.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Will there be a shuttle from the church to the venue?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No — it's a short <strong>14-minute walk</strong> between the church and the reception venue, so no shuttle is needed.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I get to and from the wedding venue?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We recommend using <strong>Uber</strong> or <strong>Bolt</strong> to get to the venue. In the evening there will be a <strong>shuttle bus</strong> from the reception venue back to the city centre.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            I'm driving — where can I park?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>There is <strong>street parking</strong> available near both the church and the wedding venue.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I bring a plus-one or my children?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>As much as we believe in the idea of the more the merrier, unfortunately the venue only allows us a certain number of people. Therefore we ask that you only bring a plus-one if you've been dating for at least <strong>1 year</strong>.</p>
+            <p>In regards to children, we have a <strong>strict no kids under the age of 10</strong> policy. RSVP can be done via the <a href="rsvp.html">RSVP page</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I take photos / videos with my phone?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Of course you can! We will be sending around a <strong>Google Photos Album</strong> for people to share photos with us after the wedding.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Will the wedding be indoors or outdoors?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Both the ceremony and the reception will be <strong>indoors</strong>. The reception does have a garden space though, where you can take a breath of fresh air or have a smoke.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What should I wear?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Romanians dress to impress, so think "the snazzier the better". That being said, we want our guests to feel comfortable, so go as fancy as you like 🙂</p>
+            <p>PS. Make sure you have some comfy shoes with you — there is a lot of dancing involved!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I wear a white dress?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>While we love everyone's individual style, we kindly ask that guests avoid wearing white so everyone can relax and fully enjoy the celebration.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Will there be WiFi?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, absolutely!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I transfer the wedding gift in advance?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Most guests share cash in an envelope on the day, but if you wish to transfer in advance, please use these details:</p>
+            <p style="margin-top:12px; font-family:'Libre Baskerville', serif; line-height:2;">
+              <strong>Name:</strong> Sabina Barbu<br/>
+              <strong>Sort Code:</strong> 20-79-29<br/>
+              <strong>Account Number:</strong> 40393851<br/>
+              <strong>IBAN:</strong> GB10BUKB20792940393851<br/>
+              <strong>SWIFT/BIC:</strong> BUKBGB22<br/>
+              <strong>Reference:</strong> Your Name
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            I wish to bring a physical gift?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>That's very kind of you! However, we would prefer the Romanian traditional way of a monetary gift. You can find out more about this on our <a href="guide.html">Wedding Guide</a> page.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            I'm flying in — what airport should I choose?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>There are two main options:</p>
+            <p><strong>1. Brașov-Ghimbav International Airport (GHV)</strong> — Our recommended choice. Located approximately 20 minutes from both the city centre and the wedding venue.</p>
+            <p><strong>2. Bucharest Henri Coandă International Airport (OTP)</strong> — Located outside of Bucharest, approximately 2.5 hours' drive from Brașov. More information can be found on our <a href="travel-guide.html">Travel Guide</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Where should I stay hotel-wise?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>There are a few hotels we recommend. You can find the full list on our <a href="travel-guide.html#hotels">Travel Guide</a> page.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            My question isn't listed here
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>If your question isn't listed or you are unsure about anything, you can either send us an email at <a href="mailto:ianandsabiwedding@gmail.com">ianandsabiwedding@gmail.com</a> or message one of us directly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">Sabi &amp; Ian</p>
+    <a href="mailto:iansabiwedding@gmail.com">iansabiwedding@gmail.com</a>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
