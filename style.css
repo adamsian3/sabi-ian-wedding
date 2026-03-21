@@ -138,8 +138,8 @@ header {
 .hero {
   background-color: var(--cream);
   text-align: center;
-  padding: 100px 24px 80px;
-  min-height: 75vh;
+  padding: 60px 24px 40px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -678,7 +678,7 @@ footer a {
   .section-cream,
   .section-sage { padding: 48px 24px; }
 
-  .hero { padding: 80px 24px 60px; min-height: 60vh; }
+  .hero { padding: 48px 24px 36px; min-height: auto; }
 }
 
 @media (max-width: 480px) {
