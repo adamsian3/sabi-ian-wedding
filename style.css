@@ -285,6 +285,8 @@ header {
 .section-sage .section-label { color: var(--sage-dark); }
 
 .section-sage a { color: var(--sage-dark); }
+.section-sage a.btn-large { color: #fff; }
+.section-sage a.btn-large:hover { color: var(--dark-green); }
 
 /* =============================
    Container
