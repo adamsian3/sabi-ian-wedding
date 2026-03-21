@@ -11,17 +11,28 @@
   <!-- NAVIGATION -->
   <header>
     <nav class="nav-title">
-      <a href="index.html">Our Wedding</a>
+      <a href="index.html" data-i18n="nav.title">Our Wedding</a>
     </nav>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Info</a></li>
-      <li><a href="when-where.html" class="active">When &amp; Where</a></li>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="guide.html">Wedding Guide</a></li>
-      <li><a href="travel-guide.html">Travel Guide</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="index.html" data-i18n="nav.info">Info</a></li>
+      <li><a href="when-where.html" class="active" data-i18n="nav.when_where">When &amp; Where</a></li>
+      <li><a href="our-story.html" data-i18n="nav.story">Our Story</a></li>
+      <li><a href="guide.html" data-i18n="nav.guide">Wedding Guide</a></li>
+      <li><a href="travel-guide.html" data-i18n="nav.travel">Travel Guide</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-trigger" onclick="toggleLangDropdown(event)" aria-label="Change language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="currentLangLabel">English</span>
+          <svg class="lang-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown">
+          <button id="lang-btn-en" onclick="setLang('en')">English</button>
+          <button id="lang-btn-ro" onclick="setLang('ro')">Română</button>
+        </div>
+      </div>
       <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
       <a href="rsvp.html" class="btn-rsvp">RSVP</a>
     </div>
@@ -31,14 +42,16 @@
   <section class="section-cream">
     <div class="container two-col">
       <div class="when-where-content">
-        <h2>When</h2>
-        <p class="text-italic" style="font-size:20px; margin-bottom:24px;">Saturday, June 12, 2027</p>
+        <h2 data-i18n="ww.when">When</h2>
+        <p class="text-italic" style="font-size:20px; margin-bottom:24px;" data-i18n="ww.when_date">Saturday, June 12, 2027</p>
 
-        <h3>Church: 1pm — 2pm</h3>
-        <p>The wedding ceremony will start at 1pm. This will be conducted in Romanian, but a translated version will be available on the day if you would like to follow along. The ceremony will take 45 minutes to 1 hour — please feel free to sit or stand wherever you wish.</p>
+        <h3 data-i18n="ww.church_time">Church: 1pm — 2pm</h3>
+        <p data-lang="en">The wedding ceremony will start at 1pm. This will be conducted in Romanian, but a translated version will be available on the day if you would like to follow along. The ceremony will take 45 minutes to 1 hour — please feel free to sit or stand wherever you wish.</p>
+        <p data-lang="ro" style="display:none;">Ceremonia religioasă va începe la ora 13:00. Aceasta se va desfășura în română, dar o versiune tradusă va fi disponibilă pe loc pentru cei care doresc să urmărească. Ceremonia durează între 45 de minute și o oră — vă rugăm să vă simțiți liberi să vă așezați sau să stați în picioare oriunde doriți.</p>
 
-        <h3>Reception: 3pm — 3am</h3>
-        <p>We're delighted to welcome you to our wedding reception at 3pm. For our non-Romanian friends, please note the dinner will be served slowly throughout the night, whilst the wedding cake will be brought out at midnight before the afterparty begins.</p>
+        <h3 data-i18n="ww.reception_time">Reception: 3pm — 3am</h3>
+        <p data-lang="en">We're delighted to welcome you to our wedding reception at 3pm. For our non-Romanian friends, please note the dinner will be served slowly throughout the night, whilst the wedding cake will be brought out at midnight before the afterparty begins.</p>
+        <p data-lang="ro" style="display:none;">Suntem încântați să vă primim la recepție începând cu ora 15:00. Prietenilor noștri care nu sunt familiarizați cu nunțile românești le spunem că masa va fi servită treptat pe parcursul serii, iar tortul va fi scos la miezul nopții, înainte de afterparty.</p>
       </div>
       <div>
         <!-- placeholder image area -->
@@ -49,21 +62,23 @@
   <!-- WHERE -->
   <section class="section-sage">
     <div class="container">
-      <h2 class="section-label">Where</h2>
+      <h2 class="section-label" data-i18n="ww.where">Where</h2>
       <div class="two-col">
         <div class="venue-card">
-          <h3>Church</h3>
+          <h3 data-i18n="ww.church_title">Church</h3>
           <h4>Biserica "Adormirea Maicii Domnului"</h4>
-          <p>Built in 1778, this historic Romanian Orthodox church has welcomed generations of families for life's most meaningful moments. Surrounded by the timeless beauty and traditions of Transylvania, it is a place of faith, love, and community — making it the perfect setting for us to begin our marriage together.</p>
-          <p><strong>Address:</strong> Strada Andrei Șaguna nr. 206, Hărman, Romania</p>
-          <a href="https://maps.google.com/?q=Biserica+Adormirea+Maicii+Domnului,+Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" class="maps-link">View on Google Maps ↗</a>
+          <p data-lang="en">Built in 1778, this historic Romanian Orthodox church has welcomed generations of families for life's most meaningful moments. Surrounded by the timeless beauty and traditions of Transylvania, it is a place of faith, love, and community — making it the perfect setting for us to begin our marriage together.</p>
+          <p data-lang="ro" style="display:none;">Construită în 1778, această istorică biserică ortodoxă română a primit generații de familii pentru cele mai semnificative momente ale vieții. Înconjurată de frumusețea atemporală și tradițiile Transilvaniei, este un loc al credinței, iubirii și comunității — cadrul perfect pentru a ne începe drumul împreună.</p>
+          <p><span data-i18n="ww.address"><strong>Address:</strong></span> Strada Andrei Șaguna nr. 206, Hărman, Romania</p>
+          <a href="https://maps.google.com/?q=Biserica+Adormirea+Maicii+Domnului,+Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" class="maps-link" data-i18n="ww.maps_view">View on Google Maps ↗</a>
         </div>
         <div class="venue-card">
-          <h3>Reception</h3>
+          <h3 data-i18n="ww.reception_title">Reception</h3>
           <h4>M.K. 1930</h4>
-          <p>Blending rustic Transylvanian character with warm hospitality, the space carries the spirit of the village's history while creating a beautiful setting for gathering, laughter, and celebration. We're so excited to share an evening of food, music, and joy here with the people we love most.</p>
-          <p><strong>Address:</strong> Strada Mihai Viteazu nr. 436, Hărman, Romania</p>
-          <a href="https://maps.google.com/?q=MK+1930,+Strada+Mihai+Viteazu+436,+Harman,+Romania" target="_blank" class="maps-link">View on Google Maps ↗</a>
+          <p data-lang="en">Blending rustic Transylvanian character with warm hospitality, the space carries the spirit of the village's history while creating a beautiful setting for gathering, laughter, and celebration. We're so excited to share an evening of food, music, and joy here with the people we love most.</p>
+          <p data-lang="ro" style="display:none;">Îmbinând caracterul rustic transilvănean cu ospitalitatea caldă, spațiul poartă spiritul istoriei satului și creează cadrul perfect pentru întâlniri, râsete și sărbătoare. Suntem nerăbdători să petrecem o seară de mâncare, muzică și bucurie alături de cei dragi.</p>
+          <p><span data-i18n="ww.address"><strong>Address:</strong></span> Strada Mihai Viteazu nr. 436, Hărman, Romania</p>
+          <a href="https://maps.google.com/?q=MK+1930,+Strada+Mihai+Viteazu+436,+Harman,+Romania" target="_blank" class="maps-link" data-i18n="ww.maps_view">View on Google Maps ↗</a>
         </div>
       </div>
     </div>
@@ -75,17 +90,17 @@
       <div style="text-align:center;">
         <div style="background:rgba(73,47,29,0.05); border-radius:16px; padding:32px; border:1px solid rgba(73,47,29,0.1);">
           <p style="font-size:40px; margin-bottom:12px;">⛪</p>
-          <h4 style="font-family:'Libre Baskerville',serif; font-size:18px; margin-bottom:8px;">The Church</h4>
+          <h4 style="font-family:'Libre Baskerville',serif; font-size:18px; margin-bottom:8px;" data-i18n="ww.church_map">The Church</h4>
           <p style="font-size:14px; line-height:1.7; margin-bottom:16px;">Strada Andrei Șaguna nr. 206<br/>Hărman, Romania</p>
-          <a href="https://maps.google.com/?q=Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" rel="noopener" class="btn-large" style="padding:12px 32px; font-size:12px;">Open in Google Maps ↗</a>
+          <a href="https://maps.google.com/?q=Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" rel="noopener" class="btn-large" style="padding:12px 32px; font-size:12px;" data-i18n="ww.maps_open">Open in Google Maps ↗</a>
         </div>
       </div>
       <div style="text-align:center;">
         <div style="background:rgba(73,47,29,0.05); border-radius:16px; padding:32px; border:1px solid rgba(73,47,29,0.1);">
           <p style="font-size:40px; margin-bottom:12px;">🥂</p>
-          <h4 style="font-family:'Libre Baskerville',serif; font-size:18px; margin-bottom:8px;">The Reception</h4>
+          <h4 style="font-family:'Libre Baskerville',serif; font-size:18px; margin-bottom:8px;" data-i18n="ww.reception_map">The Reception</h4>
           <p style="font-size:14px; line-height:1.7; margin-bottom:16px;">Strada Mihai Viteazu nr. 436<br/>Hărman, Romania</p>
-          <a href="https://maps.google.com/?q=MK+1930+Strada+Mihai+Viteazu+436+Harman+Romania" target="_blank" rel="noopener" class="btn-large" style="padding:12px 32px; font-size:12px;">Open in Google Maps ↗</a>
+          <a href="https://maps.google.com/?q=MK+1930+Strada+Mihai+Viteazu+436+Harman+Romania" target="_blank" rel="noopener" class="btn-large" style="padding:12px 32px; font-size:12px;" data-i18n="ww.maps_open">Open in Google Maps ↗</a>
         </div>
       </div>
     </div>
@@ -102,5 +117,6 @@
       document.getElementById('navLinks').classList.toggle('open');
     }
   </script>
+  <script src="lang.js"></script>
 </body>
 </html>

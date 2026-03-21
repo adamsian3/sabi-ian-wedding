@@ -88,6 +88,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 8px;
 }
 
 .btn-rsvp {
@@ -113,6 +114,83 @@ header {
   font-size: 22px;
   color: var(--dark-brown);
   padding: 4px;
+}
+
+/* =============================
+   Language Switcher
+   ============================= */
+.lang-switcher {
+  position: relative;
+  margin-right: 8px;
+}
+
+.lang-trigger {
+  background: none;
+  border: 1px solid rgba(73, 47, 29, 0.25);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-family: 'Almarai', sans-serif;
+  font-size: 13px;
+  color: var(--dark-brown);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s, background-color 0.2s;
+  white-space: nowrap;
+  height: 34px;
+}
+
+.lang-trigger:hover {
+  border-color: var(--dark-brown);
+  background-color: rgba(73, 47, 29, 0.05);
+}
+
+.lang-chevron {
+  transition: transform 0.2s;
+}
+
+.lang-switcher.open .lang-chevron {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--cream);
+  border: 1px solid rgba(73, 47, 29, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  min-width: 120px;
+  z-index: 300;
+}
+
+.lang-switcher.open .lang-dropdown {
+  display: block;
+}
+
+.lang-dropdown button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 11px 16px;
+  text-align: left;
+  font-family: 'Almarai', sans-serif;
+  font-size: 14px;
+  color: var(--dark-brown);
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.lang-dropdown button:hover {
+  background-color: rgba(73, 47, 29, 0.06);
+}
+
+.lang-dropdown button.lang-active {
+  font-weight: 700;
 }
 
 /* =============================

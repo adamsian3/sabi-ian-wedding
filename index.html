@@ -11,17 +11,28 @@
   <!-- NAVIGATION -->
   <header>
     <nav class="nav-title">
-      <a href="index.html">Our Wedding</a>
+      <a href="index.html" data-i18n="nav.title">Our Wedding</a>
     </nav>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Info</a></li>
-      <li><a href="when-where.html">When &amp; Where</a></li>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="guide.html">Wedding Guide</a></li>
-      <li><a href="travel-guide.html">Travel Guide</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav.info">Info</a></li>
+      <li><a href="when-where.html" data-i18n="nav.when_where">When &amp; Where</a></li>
+      <li><a href="our-story.html" data-i18n="nav.story">Our Story</a></li>
+      <li><a href="guide.html" data-i18n="nav.guide">Wedding Guide</a></li>
+      <li><a href="travel-guide.html" data-i18n="nav.travel">Travel Guide</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-trigger" onclick="toggleLangDropdown(event)" aria-label="Change language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="currentLangLabel">English</span>
+          <svg class="lang-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown">
+          <button id="lang-btn-en" onclick="setLang('en')">English</button>
+          <button id="lang-btn-ro" onclick="setLang('ro')">Română</button>
+        </div>
+      </div>
       <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
       <a href="rsvp.html" class="btn-rsvp">RSVP</a>
     </div>
@@ -29,9 +40,9 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="hero-date">12th June 2027</p>
+    <p class="hero-date" data-i18n="home.date">12th June 2027</p>
     <h1 class="hero-title">Sabi &amp; Ian</h1>
-    <p class="hero-subtitle">We're Getting Married!</p>
+    <p class="hero-subtitle" data-i18n="home.subtitle">We're Getting Married!</p>
   </section>
 
   <!-- FLORAL IMAGE -->
@@ -52,9 +63,11 @@
         />
       </div>
       <div>
-        <h2>A match made in heaven!</h2>
-        <p class="text-italic">Sabi &amp; Ian joyfully request the pleasure of your company as we speak our vows and join in marriage in the presence of family and friends.</p>
-        <p>As we wait for the big day to arrive, we have created this website with lots of sections to keep you up-to-date of everything and to share our love story.</p>
+        <h2 data-i18n="home.heading1">A match made in heaven!</h2>
+        <p class="text-italic" data-lang="en">Sabi &amp; Ian joyfully request the pleasure of your company as we speak our vows and join in marriage in the presence of family and friends.</p>
+        <p class="text-italic" data-lang="ro" style="display:none;">Sabi &amp; Ian vă invită cu bucurie să fiți alături de ei atunci când își vor rosti jurămintele și se vor uni în fața familiei și a prietenilor dragi.</p>
+        <p data-lang="en">As we wait for the big day to arrive, we have created this website with lots of sections to keep you up-to-date of everything and to share our love story.</p>
+        <p data-lang="ro" style="display:none;">Până la ziua cea mare, am creat acest site cu tot ce trebuie să știți și cu povestea noastră de dragoste.</p>
       </div>
     </div>
   </section>
@@ -64,19 +77,19 @@
     <div class="container">
       <div class="www-grid">
         <div class="col-when">
-          <h3>When</h3>
-          <p><strong>Saturday, June 12, 2027</strong></p>
-          <p>Church: 1pm – 2pm</p>
-          <p>Reception: 4pm – 3am</p>
+          <h3 data-i18n="home.when">When</h3>
+          <p data-i18n="home.when_date"><strong>Saturday, June 12, 2027</strong></p>
+          <p data-i18n="home.church_sched">Church: 1pm – 2pm</p>
+          <p data-i18n="home.reception_sched">Reception: 4pm – 3am</p>
         </div>
         <div class="col-church">
-          <h3>Church</h3>
+          <h3 data-i18n="home.church">Church</h3>
           <p>Biserica Adormirea Maicii Domnului</p>
           <p>Strada Andrei Șaguna nr. 206<br/>Hărman, Romania</p>
           <a href="https://maps.google.com/?q=Biserica+Adormirea+Maicii+Domnului,+Strada+Andrei+Saguna+206,+Harman,+Romania" target="_blank" class="maps-link">Google Maps ↗</a>
         </div>
         <div class="col-reception">
-          <h3>Reception</h3>
+          <h3 data-i18n="home.reception">Reception</h3>
           <p>M.K. 1930</p>
           <p>Strada Mihai Viteazu nr. 436<br/>Hărman, Romania</p>
           <a href="https://maps.google.com/?q=MK+1930,+Strada+Mihai+Viteazu+436,+Harman,+Romania" target="_blank" class="maps-link">Google Maps ↗</a>
@@ -88,7 +101,7 @@
   <!-- RSVP CTA -->
   <section class="section-sage">
     <div class="container cta-section">
-      <h2>We hope you'll join us on this special day.</h2>
+      <h2 data-i18n="home.cta">We hope you'll join us on this special day.</h2>
       <a href="rsvp.html" class="btn-large">RSVP</a>
     </div>
   </section>
@@ -96,20 +109,23 @@
   <!-- ROMANIAN WEDDING GUIDE INTRO -->
   <section class="section-cream">
     <div class="container info-block">
-      <h2>What to expect from a Romanian Wedding</h2>
-      <p>Attending a wedding in a new country can be daunting, especially if you're not used to the customs. We understand that, so we've put together an easy guide of what to expect at our blended wedding.</p>
-      <p><a href="guide.html">Read our guide →</a></p>
-      <p>If you have any questions please just drop us a DM!</p>
+      <h2 data-i18n="home.guide_heading">What to expect from a Romanian Wedding</h2>
+      <p data-lang="en">Attending a wedding in a new country can be daunting, especially if you're not used to the customs. We understand that, so we've put together an easy guide of what to expect at our blended wedding.</p>
+      <p data-lang="ro" style="display:none;">Participarea la o nuntă dintr-o altă cultură poate părea copleșitoare, mai ales dacă nu ești obișnuit cu tradițiile locale. Tocmai de aceea am pregătit un ghid simplu cu tot ce trebuie să știi despre nunta noastră.</p>
+      <p><a href="guide.html" data-i18n="home.guide_link">Read our guide →</a></p>
+      <p data-i18n="home.guide_dm">If you have any questions please just drop us a DM!</p>
     </div>
   </section>
 
   <!-- TRAVEL INTRO -->
   <section class="section-sage">
     <div class="container info-block">
-      <h2>Traveling in? No problem!</h2>
-      <p>We're so excited to welcome you and can't wait to celebrate together in Romania. Whether you're popping over for a few days or making a longer trip of it, we've put together a little travel guide to help you plan and make the most of your time.</p>
-      <p>On this page you'll find tips on getting to Brașov, some great hotel options, and a few of our favourite local restaurants. We've also highlighted some of the best things to see in the area and around the country. For more details and practical info, head over to our Travel Guide page. And if you're unsure about anything at all, just send us a message — we're happy to help.</p>
-      <p style="margin-top:16px"><a href="travel-guide.html">View Travel Guide →</a></p>
+      <h2 data-i18n="home.travel_heading">Traveling in? No problem!</h2>
+      <p data-lang="en">We're so excited to welcome you and can't wait to celebrate together in Romania. Whether you're popping over for a few days or making a longer trip of it, we've put together a little travel guide to help you plan and make the most of your time.</p>
+      <p data-lang="ro" style="display:none;">Suntem nerăbdători să vă primim și abia așteptăm să sărbătorim împreună în România. Indiferent dacă vii pentru câteva zile sau profiti de ocazie pentru o vacanță mai lungă, am pregătit un mic ghid de călătorie care să te ajute să planifici totul.</p>
+      <p data-lang="en">On this page you'll find tips on getting to Brașov, some great hotel options, and a few of our favourite local restaurants. We've also highlighted some of the best things to see in the area and around the country. For more details and practical info, head over to our Travel Guide page. And if you're unsure about anything at all, just send us a message — we're happy to help.</p>
+      <p data-lang="ro" style="display:none;">Pe această pagină vei găsi sfaturi despre cum să ajungi la Brașov, opțiuni de cazare și câteva dintre restaurantele noastre preferate. Am inclus și cele mai frumoase obiective turistice din zonă și din țară. Pentru mai multe detalii, vizitează pagina Ghid de Călătorie. Și dacă ai vreo întrebare, scrie-ne — suntem bucuroși să ajutăm!</p>
+      <p style="margin-top:16px"><a href="travel-guide.html" data-i18n="home.travel_link">View Travel Guide →</a></p>
     </div>
   </section>
 
@@ -124,5 +140,6 @@
       document.getElementById('navLinks').classList.toggle('open');
     }
   </script>
+  <script src="lang.js"></script>
 </body>
 </html>

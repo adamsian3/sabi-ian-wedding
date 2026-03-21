@@ -11,17 +11,28 @@
   <!-- NAVIGATION -->
   <header>
     <nav class="nav-title">
-      <a href="index.html">Our Wedding</a>
+      <a href="index.html" data-i18n="nav.title">Our Wedding</a>
     </nav>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Info</a></li>
-      <li><a href="when-where.html">When &amp; Where</a></li>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="guide.html" class="active">Wedding Guide</a></li>
-      <li><a href="travel-guide.html">Travel Guide</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="index.html" data-i18n="nav.info">Info</a></li>
+      <li><a href="when-where.html" data-i18n="nav.when_where">When &amp; Where</a></li>
+      <li><a href="our-story.html" data-i18n="nav.story">Our Story</a></li>
+      <li><a href="guide.html" class="active" data-i18n="nav.guide">Wedding Guide</a></li>
+      <li><a href="travel-guide.html" data-i18n="nav.travel">Travel Guide</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-trigger" onclick="toggleLangDropdown(event)" aria-label="Change language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="currentLangLabel">English</span>
+          <svg class="lang-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown">
+          <button id="lang-btn-en" onclick="setLang('en')">English</button>
+          <button id="lang-btn-ro" onclick="setLang('ro')">Română</button>
+        </div>
+      </div>
       <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
       <a href="rsvp.html" class="btn-rsvp">RSVP</a>
     </div>
@@ -29,7 +40,7 @@
 
   <!-- BANNER -->
   <div class="page-banner">
-    <h1>Our Romanian Wedding Guide</h1>
+    <h1 data-i18n="guide.banner">Our Romanian Wedding Guide</h1>
   </div>
 
   <!-- GUIDE CONTENT -->
@@ -37,54 +48,79 @@
     <div class="container">
 
       <div class="guide-section">
-        <h3>Dress to impress</h3>
-        <p>A wedding is one of the few times Romanians go all out to get really dressed up. Usually this means a suit for men and elegant evening gowns for women. Romanians dress to impress, so think "the snazzier the better". That being said, we want our guests to feel comfortable, so go as fancy as you like 🙂</p>
-        <p>PS. Make sure you have some comfy shoes with you — there is a lot of dancing involved!</p>
+        <h3 data-i18n="guide.dress">Dress to impress</h3>
+        <p data-lang="en">A wedding is one of the few times Romanians go all out to get really dressed up. Usually this means a suit for men and elegant evening gowns for women. Romanians dress to impress, so think "the snazzier the better". That being said, we want our guests to feel comfortable, so go as fancy as you like 🙂</p>
+        <p data-lang="ro" style="display:none;">La o nuntă românească, oamenii se îmbracă impecabil. De obicei, bărbații poartă costume, iar femeile rochii de seară elegante. Românii se îmbracă de parcă e cea mai importantă zi — cu cât mai eleganți, cu atât mai bine! Dar vrem ca invitații noștri să se simtă confortabil, deci purtați ce vă face să vă simțiți frumoși 🙂</p>
+        <p data-lang="en">PS. Make sure you have some comfy shoes with you — there is a lot of dancing involved!</p>
+        <p data-lang="ro" style="display:none;">PS. Asigurați-vă că aveți și o pereche de pantofi comozi — se dansează mult!</p>
       </div>
 
       <div class="guide-section">
-        <h3>Godparents, Bridesmaids and Groomsmen</h3>
-        <p>In Romania there are two types of Nasi (i.e. Godparents) — those chosen for a baby by their parents for the christening, and those the bride and groom choose for their wedding. These godparents are a married couple, who are seen as role models for the newlyweds and serve as marital mentors to help them adapt to their new lives together. During the wedding, they will have an active role during the ceremony and they sit with the newlyweds at the table during the party.</p>
-        <p>Bridesmaids and groomsmen, although they don't have as big a role as in UK culture, are still present at Romanian weddings.</p>
+        <h3 data-i18n="guide.godparents">Godparents, Bridesmaids and Groomsmen</h3>
+        <p data-lang="en">In Romania there are two types of Nasi (i.e. Godparents) — those chosen for a baby by their parents for the christening, and those the bride and groom choose for their wedding. These godparents are a married couple, who are seen as role models for the newlyweds and serve as marital mentors to help them adapt to their new lives together. During the wedding, they will have an active role during the ceremony and they sit with the newlyweds at the table during the party.</p>
+        <p data-lang="ro" style="display:none;">În România există două tipuri de nași — cei aleși pentru botez și cei pe care mireasa și mirele îi aleg pentru nuntă. Nașii de nuntă sunt un cuplu căsătorit, considerați modele pentru tinerii căsătoriți și mentori în viața de familie. Pe parcursul nunții, au un rol activ la ceremonie și stau împreună cu mirii la masă.</p>
+        <p data-lang="en">Bridesmaids and groomsmen, although they don't have as big a role as in UK culture, are still present at Romanian weddings.</p>
+        <p data-lang="ro" style="display:none;">Domnișoarele și cavalerii de onoare sunt și ei prezenți la nunțile românești, deși rolul lor nu este la fel de pronunțat ca în cultura britanică.</p>
       </div>
 
       <div class="guide-section">
-        <h3>Church Ceremony</h3>
-        <p>The religious ceremony, during which the priests read prayers and passages from the Bible, is usually long — and the guests remain standing during the service. The godmother stands by the bride's side while the godfather stands next to the groom, both holding tall candles decorated with flowers.</p>
-        <p>The godparents also help the bride and groom with the wedding rings. The ceremony usually follows a strict programme. The religious ceremony wedding processional starts with the friends and family entering the church. Once everybody is inside, the bridesmaid and groomsmen will enter next, followed by the groom with the godmother, and lastly the bride with the godfather. For the remainder of the ceremony the godparents will be standing next to the couple, by the altar.</p>
-        <p>After that comes the exchanging of the rings. The first part of the ceremony is represented by the engagement ceremony when the wedding rings are now positioned on the ring fingers of the right hand. Later on, the wedding rings are exchanged between them and end up on the left ring fingers of the bride and groom.</p>
-        <p>Another traditional moment during the ceremony relates to the wedding crowns. These crowns — which are placed on the heads of the couple — symbolise the idea that the soon-to-be-married couple "become king and queen on the day of their spiritual union."</p>
-        <p>Once this ritual is complete, it's onto the Eucharist, in which the couple is instructed to drink from a single glass of red wine and to eat from a single slice of bread, symbolising a life with love and harmony.</p>
-        <p>At the end of the ceremony, the priest lights the two candles that are brought to him by the godparents. These candles are said to symbolise purity. Once the priest lights the candles, they are then handed to the couple, meaning that they are now enlightened by Jesus.</p>
-        <p>The ceremony ends with the traditional walk around the Holy Table, sometimes followed by marriage advice from the priest. And, of course, with the newlyweds' kiss. When the bride and groom go out of the church, the guests throw wheat and rice.</p>
+        <h3 data-i18n="guide.ceremony">Church Ceremony</h3>
+        <p data-lang="en">The religious ceremony, during which the priests read prayers and passages from the Bible, is usually long — and the guests remain standing during the service. The godmother stands by the bride's side while the godfather stands next to the groom, both holding tall candles decorated with flowers.</p>
+        <p data-lang="ro" style="display:none;">Ceremonia religioasă, în cadrul căreia preoții citesc rugăciuni și pasaje din Biblie, este de obicei lungă — iar invitații stau în picioare pe toată durata ei. Nașa stă alături de mireasă, iar nașul stă lângă mire, ambii ținând lumânări înalte împodobite cu flori.</p>
+        <p data-lang="en">The godparents also help the bride and groom with the wedding rings. The ceremony usually follows a strict programme. The religious ceremony wedding processional starts with the friends and family entering the church. Once everybody is inside, the bridesmaid and groomsmen will enter next, followed by the groom with the godmother, and lastly the bride with the godfather. For the remainder of the ceremony the godparents will be standing next to the couple, by the altar.</p>
+        <p data-lang="ro" style="display:none;">Nașii îi ajută pe miri și cu verighetele. Ceremonia urmează de obicei un program strict. Procesiunea începe cu intrarea prietenilor și familiei în biserică. Odată ce toată lumea este înăuntru, intră domnișoarele și cavalerii de onoare, urmate de mire cu nașa, și în final mireasa cu nașul. Pe parcursul ceremoniei, nașii stau lângă cuplu, la altar.</p>
+        <p data-lang="en">After that comes the exchanging of the rings. The first part of the ceremony is represented by the engagement ceremony when the wedding rings are now positioned on the ring fingers of the right hand. Later on, the wedding rings are exchanged between them and end up on the left ring fingers of the bride and groom.</p>
+        <p data-lang="ro" style="display:none;">Urmează schimbul de verighete. În prima parte a ceremoniei — logodna — verighetele sunt puse pe inelarul drept. Ulterior, verighetele sunt schimbate și ajung pe inelarul stâng al mirilor.</p>
+        <p data-lang="en">Another traditional moment during the ceremony relates to the wedding crowns. These crowns — which are placed on the heads of the couple — symbolise the idea that the soon-to-be-married couple "become king and queen on the day of their spiritual union."</p>
+        <p data-lang="ro" style="display:none;">Un alt moment tradițional îl reprezintă cununiile. Aceste coroane așezate pe capetele mirilor simbolizează ideea că cei doi „devin rege și regină în ziua unirii lor spirituale".</p>
+        <p data-lang="en">Once this ritual is complete, it's onto the Eucharist, in which the couple is instructed to drink from a single glass of red wine and to eat from a single slice of bread, symbolising a life with love and harmony.</p>
+        <p data-lang="ro" style="display:none;">După acest ritual urmează Împărtășania, în cadrul căreia cuplul este invitat să bea dintr-un singur pahar de vin roșu și să mănânce dintr-o singură felie de pâine, simbolizând o viață cu dragoste și armonie.</p>
+        <p data-lang="en">At the end of the ceremony, the priest lights the two candles that are brought to him by the godparents. These candles are said to symbolise purity. Once the priest lights the candles, they are then handed to the couple, meaning that they are now enlightened by Jesus.</p>
+        <p data-lang="ro" style="display:none;">La finalul ceremoniei, preotul aprinde cele două lumânări aduse de nași. Acestea simbolizează puritatea. Odată aprinse, lumânările sunt înmânate mirilor, semnificând că sunt acum luminați de Hristos.</p>
+        <p data-lang="en">The ceremony ends with the traditional walk around the Holy Table, sometimes followed by marriage advice from the priest. And, of course, with the newlyweds' kiss. When the bride and groom go out of the church, the guests throw wheat and rice.</p>
+        <p data-lang="ro" style="display:none;">Ceremonia se încheie cu mersul tradițional în jurul Sfintei Mese, uneori urmat de sfaturi de la preot. Și, bineînțeles, cu sărutul mirilor. La ieșirea din biserică, invitații aruncă grâu și orez.</p>
       </div>
 
       <div class="guide-section">
-        <h3>The Dinner &amp; Bar</h3>
-        <p>Romanian weddings take their eating and drinking seriously! Expect a 5 course meal as well as an all-night open bar. The standard menu includes:</p>
+        <h3 data-i18n="guide.dinner">The Dinner &amp; Bar</h3>
+        <p data-lang="en">Romanian weddings take their eating and drinking seriously! Expect a 5 course meal as well as an all-night open bar. The standard menu includes:</p>
+        <p data-lang="ro" style="display:none;">La o nuntă românească, mâncarea și băutura sunt luate în serios! Așteptați-vă la o masă de 5 feluri și un bar deschis toată noaptea. Meniul standard include:</p>
         <ul style="margin: 12px 0 12px 24px; line-height:1.8;">
-          <li>A starter — a selection of cold meat products and cheese, mini-quiches, canapés plus some vegetables</li>
-          <li>A fish course</li>
-          <li><em>Sarmale</em> — a Romanian must-have consisting of minced meat wrapped in vine or cabbage leaves, served with polenta. Romanians cannot envision a wedding without them!</li>
-          <li>Steak or meat course</li>
-          <li>The cake — brought out at midnight!</li>
+          <li data-lang="en">A starter — a selection of cold meat products and cheese, mini-quiches, canapés plus some vegetables</li>
+          <li data-lang="ro" style="display:none;">Aperitiv — o selecție de preparate din carne rece, brânzeturi, mini-quiche-uri, canapele și legume</li>
+          <li data-lang="en">A fish course</li>
+          <li data-lang="ro" style="display:none;">Fel de pește</li>
+          <li data-lang="en"><em>Sarmale</em> — a Romanian must-have consisting of minced meat wrapped in vine or cabbage leaves, served with polenta. Romanians cannot envision a wedding without them!</li>
+          <li data-lang="ro" style="display:none;"><em>Sarmale</em> — un preparat tradițional românesc din carne tocată învelită în frunze de viță sau varză, servit cu mămăligă. Nicio nuntă românească nu e completă fără ele!</li>
+          <li data-lang="en">Steak or meat course</li>
+          <li data-lang="ro" style="display:none;">Friptură sau fel principal de carne</li>
+          <li data-lang="en">The cake — brought out at midnight!</li>
+          <li data-lang="ro" style="display:none;">Tortul — scos la miezul nopții!</li>
         </ul>
-        <p>The courses will be brought out throughout the evening, allowing dancing (and breathing!) breaks between each course. Romanian weddings go on till late in the night so slow and steady is the way to go!</p>
-        <p><strong>Pro tip:</strong> Do not eat before a Romanian wedding! There is sure to be more food than a normal person can handle.</p>
+        <p data-lang="en">The courses will be brought out throughout the evening, allowing dancing (and breathing!) breaks between each course. Romanian weddings go on till late in the night so slow and steady is the way to go!</p>
+        <p data-lang="ro" style="display:none;">Felurile de mâncare vor fi servite pe tot parcursul serii, lăsând timp pentru dans (și respirat!) între ele. Nunțile românești durează până târziu în noapte, deci ritmul este unul lent și constant!</p>
+        <p data-lang="en"><strong>Pro tip:</strong> Do not eat before a Romanian wedding! There is sure to be more food than a normal person can handle.</p>
+        <p data-lang="ro" style="display:none;"><strong>Sfat util:</strong> Nu mâncați înainte de o nuntă românească! Cu siguranță va fi mai multă mâncare decât poate mânca un om normal.</p>
       </div>
 
       <div class="guide-section">
-        <h3>The Party</h3>
-        <p>The couple, godparents and the newlyweds' parents are usually there to welcome everyone and get another set of kisses and congratulations. The party usually starts about an hour later (sometimes even more) with the happy couple's dance, and then the family, godparents and the guests are invited to join them on the dance floor.</p>
-        <p>You can hear almost any kind of music at a wedding these days — from disco to pop and even rock ballads — but one music genre that will always be there is traditional folk music, known as <em>muzică populară</em>. You will most surely have the chance to dance the <em>hora</em>, <em>sârbă</em>, and maybe also something called the <em>Brașoveanca</em> — a traditional dance found only around the city of Brașov. El Meneaito is also still popular at Romanian weddings.</p>
+        <h3 data-i18n="guide.party">The Party</h3>
+        <p data-lang="en">The couple, godparents and the newlyweds' parents are usually there to welcome everyone and get another set of kisses and congratulations. The party usually starts about an hour later (sometimes even more) with the happy couple's dance, and then the family, godparents and the guests are invited to join them on the dance floor.</p>
+        <p data-lang="ro" style="display:none;">Cuplul, nașii și părinții mirilor îi întâmpină pe toți cu urări și îmbrățișări. Petrecerea începe de obicei cu o oră mai târziu (uneori chiar mai mult) cu dansul mirilor, după care familia, nașii și invitații sunt invitați să li se alăture pe ringul de dans.</p>
+        <p data-lang="en">You can hear almost any kind of music at a wedding these days — from disco to pop and even rock ballads — but one music genre that will always be there is traditional folk music, known as <em>muzică populară</em>. You will most surely have the chance to dance the <em>hora</em>, <em>sârbă</em>, and maybe also something called the <em>Brașoveanca</em> — a traditional dance found only around the city of Brașov. El Meneaito is also still popular at Romanian weddings.</p>
+        <p data-lang="ro" style="display:none;">La o nuntă se poate auzi aproape orice fel de muzică — de la disco la pop și chiar balade rock — dar un gen care nu va lipsi niciodată este muzica populară. Veți avea cu siguranță ocazia să dansați hora, sârba, și poate chiar Brașoveanca — un dans tradițional specific zonei Brașovului. El Meneaito este de asemenea foarte popular la nunțile românești.</p>
       </div>
 
       <div class="guide-section">
-        <h3>Wedding Gifts</h3>
-        <p>Rather than filling a table with brightly coloured packages, a wedding gift in Romania is a simple envelope with money tucked discreetly inside. For a foreigner who is used to choosing a special gift for important occasions this could seem rather impersonal or rude, but for Romanians it is not only greatly appreciated — it is expected!</p>
-        <p>In Romania the bride and groom are responsible for their own wedding costs, therefore the pooled money is used to pay for the wedding and the honeymoon, and hopefully leave the couple with a small nest egg to begin their new life together.</p>
-        <p><strong>As a rule of thumb</strong>, the standard gift starts from about £200 per person.</p>
-        <p>If you'd prefer to transfer a gift in advance, you can find the bank details on the <a href="faq.html">FAQ page</a>.</p>
+        <h3 data-i18n="guide.gifts">Wedding Gifts</h3>
+        <p data-lang="en">Rather than filling a table with brightly coloured packages, a wedding gift in Romania is a simple envelope with money tucked discreetly inside. For a foreigner who is used to choosing a special gift for important occasions this could seem rather impersonal or rude, but for Romanians it is not only greatly appreciated — it is expected!</p>
+        <p data-lang="ro" style="display:none;">În loc de cadouri ambalate colorat, tradiția românească presupune un plic simplu cu bani înăuntru. Pentru cineva obișnuit cu culturile vestice, asta poate părea impersonal — dar pentru români este nu doar apreciat, ci și așteptat!</p>
+        <p data-lang="en">In Romania the bride and groom are responsible for their own wedding costs, therefore the pooled money is used to pay for the wedding and the honeymoon, and hopefully leave the couple with a small nest egg to begin their new life together.</p>
+        <p data-lang="ro" style="display:none;">În România, mireasa și mirele suportă costurile nunții, iar banii strânși din plicuri sunt folosiți pentru a plăti nunta și luna de miere, lăsând sperăm un mic fond pentru începutul vieții împreună.</p>
+        <p data-lang="en"><strong>As a rule of thumb</strong>, the standard gift starts from about £200 per person.</p>
+        <p data-lang="ro" style="display:none;"><strong>Ca regulă generală</strong>, cadoul standard pornește de la aproximativ 200 de lire sterline per persoană.</p>
+        <p data-lang="en">If you'd prefer to transfer a gift in advance, you can find the bank details on the <a href="faq.html">FAQ page</a>.</p>
+        <p data-lang="ro" style="display:none;">Dacă dorești să transferi cadoul în avans, găsești detaliile bancare pe pagina <a href="faq.html">Întrebări Frecvente</a>.</p>
       </div>
 
     </div>
@@ -101,5 +137,6 @@
       document.getElementById('navLinks').classList.toggle('open');
     }
   </script>
+  <script src="lang.js"></script>
 </body>
 </html>

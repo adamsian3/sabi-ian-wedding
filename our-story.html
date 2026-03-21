@@ -11,17 +11,28 @@
   <!-- NAVIGATION -->
   <header>
     <nav class="nav-title">
-      <a href="index.html">Our Wedding</a>
+      <a href="index.html" data-i18n="nav.title">Our Wedding</a>
     </nav>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Info</a></li>
-      <li><a href="when-where.html">When &amp; Where</a></li>
-      <li><a href="our-story.html" class="active">Our Story</a></li>
-      <li><a href="guide.html">Wedding Guide</a></li>
-      <li><a href="travel-guide.html">Travel Guide</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="index.html" data-i18n="nav.info">Info</a></li>
+      <li><a href="when-where.html" data-i18n="nav.when_where">When &amp; Where</a></li>
+      <li><a href="our-story.html" class="active" data-i18n="nav.story">Our Story</a></li>
+      <li><a href="guide.html" data-i18n="nav.guide">Wedding Guide</a></li>
+      <li><a href="travel-guide.html" data-i18n="nav.travel">Travel Guide</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-trigger" onclick="toggleLangDropdown(event)" aria-label="Change language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="currentLangLabel">English</span>
+          <svg class="lang-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown">
+          <button id="lang-btn-en" onclick="setLang('en')">English</button>
+          <button id="lang-btn-ro" onclick="setLang('ro')">Română</button>
+        </div>
+      </div>
       <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
       <a href="rsvp.html" class="btn-rsvp">RSVP</a>
     </div>
@@ -30,7 +41,7 @@
   <!-- ABOUT US -->
   <section class="section-cream">
     <div class="container">
-      <h2 class="section-label">About Us</h2>
+      <h2 class="section-label" data-i18n="story.about">About Us</h2>
       <div class="two-col">
         <div>
           <img
@@ -41,12 +52,14 @@
         </div>
         <div>
           <div style="margin-bottom:36px;" class="bio-col">
-            <h3>The Bride</h3>
-            <p>Sabi was born and raised in the picturesque city of Brasov, Romania. After finishing her studies at a German high school, she moved to England to study Events Management. Today, she works for a global corporate events company, where she heads the event operations team, managing the renewable energy portfolio.</p>
+            <h3 data-i18n="story.bride">The Bride</h3>
+            <p data-lang="en">Sabi was born and raised in the picturesque city of Brasov, Romania. After finishing her studies at a German high school, she moved to England to study Events Management. Today, she works for a global corporate events company, where she heads the event operations team, managing the renewable energy portfolio.</p>
+            <p data-lang="ro" style="display:none;">Sabi s-a născut și a crescut în pitorescul oraș Brașov, România. După ce a absolvit un liceu german, s-a mutat în Anglia pentru a studia Managementul Evenimentelor. Astăzi lucrează pentru o companie globală de corporate events, unde conduce echipa de operațiuni, gestionând portofoliul de energie regenerabilă.</p>
           </div>
           <div class="bio-col">
-            <h3>The Groom</h3>
-            <p>Ian was born in Swindon, United Kingdom, and spent his early childhood living across Western Europe as a result of his father's work. He studied marketing at university in the south of England, and currently works in advertising in London, where he supports leading global brands — including Spotify — in driving business growth through digital marketing.</p>
+            <h3 data-i18n="story.groom">The Groom</h3>
+            <p data-lang="en">Ian was born in Swindon, United Kingdom, and spent his early childhood living across Western Europe as a result of his father's work. He studied marketing at university in the south of England, and currently works in advertising in London, where he supports leading global brands — including Spotify — in driving business growth through digital marketing.</p>
+            <p data-lang="ro" style="display:none;">Ian s-a născut în Swindon, Regatul Unit, și și-a petrecut copilăria locuind în diverse orașe din Europa de Vest, datorită profesiei tatălui său. A studiat marketingul la o universitate din sudul Angliei și în prezent lucrează în publicitate la Londra, unde sprijină branduri globale de renume — inclusiv Spotify — în creșterea afacerii prin marketing digital.</p>
           </div>
         </div>
       </div>
@@ -56,7 +69,7 @@
   <!-- TIMELINE -->
   <section class="section-sage">
     <div class="container">
-      <h2 class="section-label" style="color:var(--sage-dark);">Our Journey</h2>
+      <h2 class="section-label" style="color:var(--sage-dark);" data-i18n="story.journey">Our Journey</h2>
 
       <div class="timeline">
 
@@ -73,8 +86,9 @@
             <span class="timeline-date">07.05.2022</span>
           </div>
           <div class="timeline-text">
-            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;">We meet for the first time</p>
-            <p>We meet for the first time at our friends' birthday party and we clicked straight away!</p>
+            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;" data-i18n="story.meet_title">We meet for the first time</p>
+            <p data-lang="en">We meet for the first time at our friends' birthday party and we clicked straight away!</p>
+            <p data-lang="ro" style="display:none;">Ne-am întâlnit pentru prima dată la petrecerea de ziua unor prieteni comuni și ne-am înțeles instant!</p>
           </div>
         </div>
 
@@ -91,8 +105,9 @@
             <span class="timeline-date">23.05.2022</span>
           </div>
           <div class="timeline-text">
-            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;">Our first date!</p>
-            <p>It was official — our first date, and the beginning of everything.</p>
+            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;" data-i18n="story.date_title">Our first date!</p>
+            <p data-lang="en">It was official — our first date, and the beginning of everything.</p>
+            <p data-lang="ro" style="display:none;">Era oficial — prima noastră întâlnire romantică și începutul a tot ce a urmat.</p>
           </div>
         </div>
 
@@ -109,8 +124,9 @@
             <span class="timeline-date">26.06.2022</span>
           </div>
           <div class="timeline-text">
-            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;">Going to our first gig</p>
-            <p>Red Hot Chili Peppers — our first concert together. What a way to kick things off!</p>
+            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;" data-i18n="story.gig_title">Going to our first gig</p>
+            <p data-lang="en">Red Hot Chili Peppers — our first concert together. What a way to kick things off!</p>
+            <p data-lang="ro" style="display:none;">Red Hot Chili Peppers — primul nostru concert împreună. Ce debut memorabil!</p>
           </div>
         </div>
 
@@ -127,8 +143,9 @@
             <span class="timeline-date">15.08.2022</span>
           </div>
           <div class="timeline-text">
-            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;">Boomtown Chapter One!</p>
-            <p>Our first festival together — better remembered as the start of many great adventures.</p>
+            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;" data-i18n="story.festival_title">Boomtown Chapter One!</p>
+            <p data-lang="en">Our first festival together — better remembered as the start of many great adventures.</p>
+            <p data-lang="ro" style="display:none;">Primul nostru festival împreună — de acum înainte, aventurile nu s-au mai oprit.</p>
           </div>
         </div>
 
@@ -145,8 +162,9 @@
             <span class="timeline-date">2022</span>
           </div>
           <div class="timeline-text">
-            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;">Making memories</p>
-            <p>Every moment together has been one to treasure.</p>
+            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;" data-i18n="story.memories_title">Making memories</p>
+            <p data-lang="en">Every moment together has been one to treasure.</p>
+            <p data-lang="ro" style="display:none;">Fiecare moment petrecut împreună a fost de neuitat.</p>
           </div>
         </div>
 
@@ -163,8 +181,9 @@
             <span class="timeline-date">27.05.2023</span>
           </div>
           <div class="timeline-text">
-            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;">Our first trip abroad!</p>
-            <p>Exploring the world together — the first of many adventures to come.</p>
+            <p class="text-italic" style="font-size:18px; font-family:'Libre Baskerville',serif;" data-i18n="story.trip_title">Our first trip abroad!</p>
+            <p data-lang="en">Exploring the world together — the first of many adventures to come.</p>
+            <p data-lang="ro" style="display:none;">Prima noastră vacanță în afara țării — prima dintr-o lungă serie de aventuri.</p>
           </div>
         </div>
 
@@ -183,5 +202,6 @@
       document.getElementById('navLinks').classList.toggle('open');
     }
   </script>
+  <script src="lang.js"></script>
 </body>
 </html>

@@ -11,17 +11,28 @@
   <!-- NAVIGATION -->
   <header>
     <nav class="nav-title">
-      <a href="index.html">Our Wedding</a>
+      <a href="index.html" data-i18n="nav.title">Our Wedding</a>
     </nav>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Info</a></li>
-      <li><a href="when-where.html">When &amp; Where</a></li>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="guide.html">Wedding Guide</a></li>
-      <li><a href="travel-guide.html">Travel Guide</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="index.html" data-i18n="nav.info">Info</a></li>
+      <li><a href="when-where.html" data-i18n="nav.when_where">When &amp; Where</a></li>
+      <li><a href="our-story.html" data-i18n="nav.story">Our Story</a></li>
+      <li><a href="guide.html" data-i18n="nav.guide">Wedding Guide</a></li>
+      <li><a href="travel-guide.html" data-i18n="nav.travel">Travel Guide</a></li>
+      <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-trigger" onclick="toggleLangDropdown(event)" aria-label="Change language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="currentLangLabel">English</span>
+          <svg class="lang-chevron" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-dropdown">
+          <button id="lang-btn-en" onclick="setLang('en')">English</button>
+          <button id="lang-btn-ro" onclick="setLang('ro')">Română</button>
+        </div>
+      </div>
       <button class="mobile-menu-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
       <a href="rsvp.html" class="btn-rsvp">RSVP</a>
     </div>
@@ -31,16 +42,19 @@
   <section class="section-cream" style="min-height: calc(100vh - 64px - 90px); display:flex; align-items:center;">
     <div class="container">
       <div class="rsvp-center">
-        <h2>We hope you'll join us!</h2>
+        <h2 data-i18n="rsvp.heading">We hope you'll join us!</h2>
         <div class="divider"></div>
-        <p>Please RSVP by <strong>5th August 2026</strong> so we can make sure everything is perfect for the big day.</p>
-        <p>Click the button below to fill in your RSVP form.</p>
+        <p data-lang="en">Please RSVP by <strong>5th August 2026</strong> so we can make sure everything is perfect for the big day.</p>
+        <p data-lang="ro" style="display:none;">Vă rugăm să confirmați participarea până pe <strong>5 August 2026</strong> pentru a ne asigura că totul va fi perfect.</p>
+        <p data-lang="en">Click the button below to fill in your RSVP form.</p>
+        <p data-lang="ro" style="display:none;">Faceți clic pe butonul de mai jos pentru a completa formularul de confirmare.</p>
         <!-- ⚠️ Replace the href below with your actual Google Form URL -->
-        <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="btn-large" rel="noopener noreferrer">
+        <a href="YOUR_GOOGLE_FORM_URL_HERE" target="_blank" class="btn-large" rel="noopener noreferrer" data-i18n="rsvp.btn">
           RSVP Now
         </a>
         <p style="margin-top:36px; font-size:14px; opacity:0.75;">
-          Have questions? See our <a href="faq.html">FAQ page</a> or email us at<br/>
+          <span data-lang="en">Have questions? See our <a href="faq.html">FAQ page</a> or email us at</span>
+          <span data-lang="ro" style="display:none;">Ai întrebări? Vezi <a href="faq.html">pagina FAQ</a> sau scrie-ne la</span><br/>
           <a href="mailto:ianandsabiwedding@gmail.com">ianandsabiwedding@gmail.com</a>
         </p>
       </div>
@@ -58,5 +72,6 @@
       document.getElementById('navLinks').classList.toggle('open');
     }
   </script>
+  <script src="lang.js"></script>
 </body>
 </html>
