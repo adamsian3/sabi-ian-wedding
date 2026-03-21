@@ -413,10 +413,10 @@ p:last-child { margin-bottom: 0; }
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 700;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.btn-large:hover { opacity: 0.85; color: #fff; }
+.btn-large:hover { background-color: #fff; color: var(--dark-green); opacity: 1; }
 
 /* =============================
    Info block (homepage sections)
