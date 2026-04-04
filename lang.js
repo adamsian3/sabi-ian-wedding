@@ -7,7 +7,7 @@ const translations = {
   en: {
     // Navigation
     'nav.title':        'Our Wedding',
-    'nav.info':         'Info',
+    'nav.info':         'Home',
     'nav.when_where':   'When &amp; Where',
     'nav.story':        'Our Story',
     'nav.guide':        'Wedding Guide',
@@ -103,7 +103,7 @@ const translations = {
   ro: {
     // Navigation
     'nav.title':        'Nunta Noastră',
-    'nav.info':         'Informații',
+    'nav.info':         'Acasă',
     'nav.when_where':   'Când &amp; Unde',
     'nav.story':        'Povestea Noastră',
     'nav.guide':        'Ghidul Nunții',
