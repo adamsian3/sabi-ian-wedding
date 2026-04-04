@@ -28,7 +28,7 @@ const translations = {
     'home.guide_heading':  'What to expect from a Romanian Wedding',
     'home.guide_link':     'Read our guide →',
     'home.guide_dm':       'If you have any questions please just drop us a DM!',
-    'home.travel_heading': 'Traveling in? No problem!',
+    'home.travel_heading': 'Travelling in? No problem!',
     'home.travel_link':    'View Travel Guide →',
 
     // when-where.html
@@ -55,7 +55,7 @@ const translations = {
     'story.gig_title':     'Going to our first gig',
     'story.festival_title':'Boomtown Chapter One!',
     'story.memories_title':'Making memories',
-    'story.trip_title':    'Our first trip abroad!',
+    'story.trip_title':    'Our first holiday abroad!',
 
     // guide.html
     'guide.banner':      'Our Romanian Wedding Guide',
