@@ -261,9 +261,9 @@ header {
    ============================= */
 .img-fullwidth {
   width: 100%;
-  max-height: 420px;
+  max-height: 500px;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center bottom;
   display: block;
 }
 
