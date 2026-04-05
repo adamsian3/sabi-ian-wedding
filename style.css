@@ -304,8 +304,6 @@ header {
   align-items: center;
 }
 
-.two-col-top { align-items: start; }
-
 .two-col.reverse { direction: rtl; }
 .two-col.reverse > * { direction: ltr; }
 
@@ -455,6 +453,17 @@ p:last-child { margin-bottom: 0; }
 /* =============================
    When & Where page
    ============================= */
+.when-when-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+}
+
+.when-header {
+  grid-column: 1 / -1;
+  margin-bottom: 28px;
+}
+
 .when-where-content {
   max-width: 680px;
 }
@@ -466,7 +475,7 @@ p:last-child { margin-bottom: 0; }
 
 .when-where-content h3 {
   font-size: 22px;
-  margin-top: 28px;
+  margin-top: 0;
   margin-bottom: 8px;
 }
 
@@ -741,8 +750,16 @@ footer a {
   .www-grid .col-reception,
   .www-grid .col-where-header { grid-column: 1; }
 
-  .when-where-content h2,
-  .when-where-content > .text-italic { text-align: center; }
+  .when-when-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .when-header { text-align: center; }
+
+  .when-where-content h3 {
+    margin-top: 28px;
+  }
 
   .col-where-desktop { display: none; }
   .col-where-mobile {
