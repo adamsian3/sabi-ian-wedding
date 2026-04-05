@@ -464,6 +464,16 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 28px;
 }
 
+.when-col-church {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.when-col-reception {
+  grid-column: 2;
+  grid-row: 2;
+}
+
 .when-where-content {
   max-width: 680px;
 }
@@ -756,6 +766,16 @@ footer a {
   }
 
   .when-header { text-align: center; }
+
+  .when-col-church {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .when-col-reception {
+    grid-column: 1;
+    grid-row: auto;
+  }
 
   .when-where-content h3 {
     margin-top: 28px;
