@@ -56,6 +56,7 @@ const translations = {
     'story.festival_title':'Boomtown Chapter One!',
     'story.memories_title':'Making memories',
     'story.trip_title':    'Our first holiday abroad!',
+    'story.proposal_title':'She said yes!',
 
     // guide.html
     'guide.banner':      'Our Romanian Wedding Guide',
@@ -152,6 +153,7 @@ const translations = {
     'story.festival_title':'Boomtown — Capitolul Unu!',
     'story.memories_title':'Amintiri de neuitat',
     'story.trip_title':    'Prima noastră vacanță!',
+    'story.proposal_title':'Ea a zis DA!',
 
     // guide.html
     'guide.banner':      'Ghidul Nunții Noastre Românești',
