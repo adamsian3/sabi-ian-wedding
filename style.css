@@ -462,6 +462,7 @@ p:last-child { margin-bottom: 0; }
 .when-header {
   grid-column: 1 / -1;
   margin-bottom: 28px;
+  text-align: center;
 }
 
 .when-col-church {
