@@ -739,6 +739,9 @@ footer a {
   .www-grid .col-reception,
   .www-grid .col-where-header { grid-column: 1; }
 
+  .when-where-content h2,
+  .when-where-content > .text-italic { text-align: center; }
+
   .col-where-desktop { display: none; }
   .col-where-mobile {
     display: block;
