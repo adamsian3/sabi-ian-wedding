@@ -118,9 +118,9 @@ const translations = {
     'home.when':           'Când',
     'home.when_date':      '<strong>Sâmbătă, 12 Iunie 2027</strong>',
     'home.church':         'Biserică',
-    'home.church_sched':   'Ceremonie: 13:30 – 14:30',
+    'home.church_sched':   'Ceremonia Religioasă: 13:30 – 14:30',
     'home.reception':      'Recepție',
-    'home.reception_sched':'Recepție: 16:00 – 3:00',
+    'home.reception_sched':'Recepția și Petrecerea: 15:00 – 03:00',
     'home.cta':            'Sperăm să fim cu toții împreună în această zi specială.',
     'home.guide_heading':  'Ce să te aștepți de la o nuntă românească',
     'home.guide_link':     'Citește ghidul nostru →',
@@ -131,8 +131,8 @@ const translations = {
     // when-where.html
     'ww.when':          'Când',
     'ww.when_date':     'Sâmbătă, 12 Iunie 2027',
-    'ww.church_time':   'Ceremonie: 13:30 — 14:30',
-    'ww.reception_time':'Recepție: 15:00 — 3:00',
+    'ww.church_time':   'Ceremonia Religioasă: 13:30 — 14:30',
+    'ww.reception_time':'Recepția și Petrecerea: 15:00 — 03:00',
     'ww.where':         'Unde',
     'ww.church_title':  'Biserică',
     'ww.address':       '<strong>Adresă:</strong>',
@@ -157,21 +157,21 @@ const translations = {
 
     // guide.html
     'guide.banner':      'Ghidul Nunții Noastre Românești',
-    'guide.dress':       'Îmbrăcați-vă elegant',
+    'guide.dress':       'Dress Code: Eleganță și Confort',
     'guide.godparents':  'Nași, Domnișoare de Onoare și Cavaleri de Onoare',
-    'guide.ceremony':    'Ceremonia la Biserică',
+    'guide.ceremony':    'Ceremonia Religioasă',
     'guide.dinner':      'Cina &amp; Barul',
     'guide.party':       'Petrecerea',
-    'guide.gifts':       'Cadouri de Nuntă',
+    'guide.gifts':       'Cadouri de Nuntă: O Tradiție Diferită',
 
     // travel-guide.html
-    'travel.banner':         'Ghidul Tău de Călătorie în România',
-    'travel.how':            'Cum ajungi la Brașov',
-    'travel.around':         'Deplasarea în oraș',
-    'travel.see':            'Ce să vizitezi în Brașov',
+    'travel.banner':         'Ghidul tău de călătorie în România',
+    'travel.how':            'Cum ajungeți la Brașov?',
+    'travel.around':         'Deplasarea prin oraș',
+    'travel.see':            'Ce să vizitați în Brașov',
     'travel.restaurants':    'Cele mai bune restaurante din Brașov',
-    'travel.hotels':         'Hoteluri în Brașov',
-    'travel.around_brasov':  'Ce să vizitezi în împrejurimile Brașovului',
+    'travel.hotels':         'Cazare în Brașov',
+    'travel.around_brasov':  'Ce să vizitați în împrejurimile Brașovului',
     'travel.sightseeing':    'Obiective turistice în România',
 
     // faq.html
